@@ -9,6 +9,8 @@ mongoose.connect('mongodb://localhost:27017/w_chat', {
   useNewUrlParser: true, 
   useUnifiedTopology: true 
 });
+.then(() => console.log('تم الاتصال بقاعدة البيانات بنجاح'))
+.catch(err => console.error('فشل الاتصال:', err));
 
 // نموذج المستخدم
 const User = mongoose.model('User', {
